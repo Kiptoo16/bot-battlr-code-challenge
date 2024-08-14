@@ -1,25 +1,118 @@
+
 body {
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  background-color:gainsboro;
+  color: #333;
 }
 
-.text-wrap {
-  word-wrap: break-word;
+h1 {
+  text-align: center;
+  color: #007bff;
+  margin-top: 20px;
 }
 
-.bot-army {
-  overflow-x: scroll;
-  min-height: 300px;
-  max-width: 100%;
-  flex-direction: column-reverse;
+div {
+  padding: 20px;
 }
 
-.ui.grid > .row.bot-army-row {
-  flex-wrap: nowrap;
-  min-height: 100%;
+
+.bot-collection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
-.ui.grid {
-  padding: 0px 20px;
+.bot-item {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 200px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.bot-item img {
+  width: 100%;
+  height: auto;
+}
+
+.bot-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.bot-item h3 {
+  margin: 10px 0;
+}
+
+
+.bot-specs {
+  max-width: 600px;
+  margin: 20px auto;
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.bot-specs img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.bot-specs h2 {
+  margin-top: 0;
+}
+
+.bot-specs p {
+  margin: 10px 0;
+}
+
+.bot-specs button {
+  background-color: #007bff;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  margin: 10px 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.bot-specs button:hover {
+  background-color: #0056b3;
+}
+
+.your-bot-army {
+  max-width: 800px;
+  margin: 20px auto;
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.your-bot-army h2 {
+  margin-top: 0;
+}
+
+.your-bot-army ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.your-bot-army li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.your-bot-army li:last-child {
+  border-bottom: none;
 }

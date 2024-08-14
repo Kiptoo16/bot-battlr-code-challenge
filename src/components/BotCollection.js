@@ -1,19 +1,29 @@
-import React from "react";
-import BotCard from "./BotCard"
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import axios from 'axios';
 
-function BotCollection({ bots, addBot, dischargeBot }) {
+function BotCollection() {
+  const [bots, setBots] = useState([]);
+
+  useEffect(() => {
+    axios.get('https://bot-battlr-backend-beryl.vercel.app/bots')
+      .then(response => setBots(response.data))
+      .catch(error => console.error(error));
+  }, []);
 
   return (
-    <div className="ui four column grid">
-      <div className="row">
-        {<ul>{bots.map((bot) => (
-          <BotCard key={bot.id} bot={bot} handleBot={addBot} handleDelete={dischargeBot}></BotCard>
-        ))}</ul>
-
-        }
-        Collection of all bots
-
-      </div>
+    <div>
+      <h2>Bot Collection</h2>
+      <ul>
+        {bots.map(bot => (
+          <li key={bot.id}>
+            <Link to={`/bots/${bot.id}`}>
+              <img src={bot.avatar_url} alt={bot.name} width="100" />
+              <p>{bot.name}</p>
+            </Link>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
