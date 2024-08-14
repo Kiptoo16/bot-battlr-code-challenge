@@ -1,6 +1,6 @@
 # BOT BATTLR
 # WEEK 2 CODE CHALLENGE
-# Vercel Link 
+# Vercel Link [https://bot-battlr-code-challenge-orcin.vercel.app/]
 
 Bot Battlr is an engaging web application where users can view and manage a collection of bots, add them to their army, and navigate through different bot details. Built using React, this app leverages react-router-dom for navigation and axios for data fetching, providing a dynamic and interactive experience.
 
@@ -65,3 +65,4 @@ Routes:
 /bots/:id: Displays the BotSpecs component for a specific bot.
 /army: Displays the army overview page (implement as needed).
 /: Displays the bot collection page (implement as needed).
+@Kevin Kiptoo _2024
